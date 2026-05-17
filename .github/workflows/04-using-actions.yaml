@@ -9,8 +9,11 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Printing Folders
-        uses: jaywcjlove/github-action-folder-tree@main
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          exclude: "node_modules|dist|.git|.husky"
-          depth: 3
+          node-version: "20.x"
+      - name: Install Dependencies
+        run: |
+          cd 04-using-actions/react-app
+          npm ci
