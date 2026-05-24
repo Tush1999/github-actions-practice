@@ -7,6 +7,8 @@ on:
         type: boolean
         default: false
 
+run-name: Using Expressions ${{ inputs.debug && 'ON' || 'OFF'}}
+
 jobs:
   echo:
     runs-on: ubuntu-latest
@@ -20,5 +22,5 @@ jobs:
           echo Runner OS: ${{runner.os}}
 
       - name: "[debug] Print when triggered from main"
-        if: inputs.debug == true && github.ref_name == 'refs/heads/main'
+        if: inputs.debug == true && github.ref_name == 'main'
         run: echo I was triggered from main
