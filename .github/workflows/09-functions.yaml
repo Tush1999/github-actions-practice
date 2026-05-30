@@ -25,6 +25,7 @@ jobs:
         run: sleep 20
 
       - name: Failing step
+        continue-on-error: true
         run: exit 1
 
       - name: I will be skipped
