@@ -8,10 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print PR title
-        run: ${{ github.event.pull_request.title }}
+        run: echo ${{ github.event.pull_request.title }}
 
       - name: Print PR labels
-        run: ${{ github.event.pull_request.labels }}
+        run: echo ${{ github.event.pull_request.labels }}
 
       - name: Sleep for 20 seconds
         run: sleep 20
