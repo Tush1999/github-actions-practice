@@ -13,9 +13,7 @@ jobs:
 
       - name: Print PR labels
         run: |
-          cat << EOF 
-          ${{ toJSON(github.event.pull_request.labels) }}
-          EOF
+          echo ${{ toJSON(github.event.pull_request.labels) }}
 
       - name: Sleep for 20 seconds
         run: sleep 20
