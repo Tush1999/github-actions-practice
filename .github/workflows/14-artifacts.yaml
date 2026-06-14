@@ -41,7 +41,7 @@ jobs:
       - name: Upload build files
         uses: actions/upload-artifact@v4
         with:
-          name: $build-artifact-key
+          name: ${{ env.build-artifact-key }}
           path: 13-caching/react-app/build
 
   deploy:
@@ -51,7 +51,7 @@ jobs:
       - name: Download build files
         uses: actions/download-artifact@v4
         with:
-          name: $build-artifact-key
+          name: ${{ env.build-artifact-key }}
           path: build
       - name: Show folder structure
         run: ls -R
