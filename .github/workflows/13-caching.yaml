@@ -91,7 +91,8 @@ jobs:
           fetch-depth: 0
       - name: Setup Node
         uses: actions/setup-node@v4
-        with: ${{ inputs.node-version }}
+        with:
+          node-version: ${{ inputs.node-version }}
       - name: Download cached dependencies
         id: cache
         uses: actions/cache@v3
