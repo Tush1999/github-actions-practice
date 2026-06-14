@@ -1,0 +1,9 @@
+name: 14 - Working with Artifacts
+on: workflow_dispatch
+
+jobs:
+  test-build:
+    defaults:
+      run:
+        working-directory: ./13-caching/react-app
+    runs-on: ubuntu-latest

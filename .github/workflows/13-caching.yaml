@@ -82,7 +82,7 @@ jobs:
     needs: install-deps
     defaults:
       run:
-        working-directory: 13-caching/react-app
+        working-directory: ../13-caching/react-app
     if: success()
     steps:
       - name: Checkout code
