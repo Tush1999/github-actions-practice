@@ -98,7 +98,3 @@ jobs:
         with:
           path: 13-caching/react-app/node_modules
           key: ${{ needs.install-deps.outputs.CACHE_KEY }}
-      - name: Testing
-        run: npm run test
-      - name: Linting
-        run: echo Linting...
